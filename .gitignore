@@ -17,7 +17,7 @@ dist/
 downloads/
 eggs/
 .eggs/
-
+lib/
 lib64/
 parts/
 sdist/
@@ -108,6 +108,7 @@ celerybeat.pid
 .env
 
 env/
+venv/
 ENV/
 env.bak/
 venv.bak/
