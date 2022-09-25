@@ -5,7 +5,7 @@ import pandas as pd
 app=Dash(__name__)
 data=pd.read_csv('./data/ouput.csv')
 data = data.sort_values(by="date")
-fig=px.bar(data,x='date',y='sale')
+fig=px.line(data,x='date',y='sale')
 app.layout=html.Div(children=[html.H1(children='Sales V/S Date'),
                               dcc.Graph(id='example-graph',figure=fig)
                               ])
