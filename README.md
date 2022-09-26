@@ -29,12 +29,12 @@ pip install -r  requirements.txt
 python app.py
 ```
 
-3. the last step is to open this [http://127.0.0.1:8050/](http://127.0.0.1:8050/) on any browser you like.
+3. FInally, open this [http://127.0.0.1:8050/](http://127.0.0.1:8050/) on any browser you like.
 
 We look forward to hear your feedback.
 
 <br><br>
-## Screensots from the game
+## Screensots from the Project
 | <img src="https://github.com/3laaHisham/quantium-starter-repo/releases/download/untagged-7a8bb7abb9e92a1fd81b/Untitled.jpg"> |
 |:--:| 
 | **View** |
