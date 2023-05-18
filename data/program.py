@@ -30,7 +30,7 @@ for csv_file in csv_files:
                 price = int(row[2])
 
                 # Calculate the sales
-                sales = quantity * price
+                sales = (quantity * price)/100
 
                 # Write the row to the output file
                 writer.writerow([sales, row[3], row[4]])
