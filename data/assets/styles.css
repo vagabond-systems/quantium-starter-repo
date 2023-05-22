@@ -1,0 +1,67 @@
+/* styles.css */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.title {
+  text-align: center;
+  font-size: 48px;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+.filters {
+  margin-bottom: 20px;
+}
+
+.filter-label {
+  font-size: 18px;
+  color: #333333;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.radio-items {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.radio-input {
+    display: none;
+}
+
+.radio-label {
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #FFFFFF;
+    background-color: #333333;
+    border-radius: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: background-color .3s ease;
+
+}
+
+.radio-label:hover {
+    background-color:#808080;
+
+}
+
+.sales-graph {
+    height:500px; 
+    width:100%; 
+    margin-left:-20px; 
+    margin-right:-20px; 
+}
+
+body {
+    background-color:#F8F8F8; 
+}
