@@ -15,7 +15,7 @@ color = {
 
 available_regions = ['north', 'south', 'east', 'west', 'all']
 
-figure = px.line(df, x="date", y="sales", title="Sales Data")
+figure = px.line(df, x="date", y="sales", title="sales-chart")
 
 app.layout = html.Div(children=[
     html.H1(children='Pink Morsel Sales', style={'textAlign': 'center', 'color': '#7FDBFF', 'font-weight': 'bold'}),
