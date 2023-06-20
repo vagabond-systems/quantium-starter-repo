@@ -1,3 +1,0 @@
-
-
-start: gunicorn region.py:data
