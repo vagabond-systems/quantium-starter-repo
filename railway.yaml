@@ -1,0 +1,3 @@
+envs:
+  PYTHON_VERSION: "3.10"
+  START_CMD: "gunicorn app:server"
