@@ -2,6 +2,7 @@ import pandas as pd
 import dash
 from dash import html, dcc, callback
 import plotly.express as px
+import os
 
 # Creating a line chart using Dash to display our final data
 df = pd.read_csv('concat_file.csv')
