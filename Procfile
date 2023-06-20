@@ -1,2 +1,2 @@
 
-web: gunicorn region:server
+web: gunicorn data/region:server
