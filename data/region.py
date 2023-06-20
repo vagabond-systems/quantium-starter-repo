@@ -10,7 +10,7 @@ df = pd.read_csv('concat_file.csv')
 df = df.sort_values(by="date")
 
 app = dash.Dash(__name__)
-server = data/region.server
+server = data.region.server
 
 color = {
     'background': 'black'
