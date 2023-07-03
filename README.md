@@ -1,2 +1,5 @@
 # Quantium starter repo
-This repo contains everything you need to get started on the program! Good luck!
+A data science project to track an organisation's sales performance.
+Collects and visualises data using modern tools. 
+
+
