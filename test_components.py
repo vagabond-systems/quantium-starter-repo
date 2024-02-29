@@ -1,5 +1,5 @@
 import chromedriver_autoinstaller
-from task_three import app
+from app import app
 
 chromedriver_autoinstaller.install()
 
