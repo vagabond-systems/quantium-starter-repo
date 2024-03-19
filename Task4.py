@@ -1,18 +1,23 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[4]:
-
+# In[2]:
 
 
 from dash import Dash, dcc, html, Input, Output
 import plotly.express as px
 import pandas as pd
+import os
 
 app = Dash(__name__)
 
-# Your data loading and processing code remains the same...
-df_0 = pd.read_csv('daily_sales_data_0.csv')
+data_folder = os.path.abspath('data')
+
+# Construct the absolute path to the CSV file
+
+# Read the CSV file
+df_0 = pd.read_csv(os.path.join(data_folder, 'daily_sales_data_0.csv'))
+
 
 # Filter rows where 'product' is 'pink morsel'
 df_0 = df_0[df_0['product'] == 'pink morsel']
@@ -30,7 +35,7 @@ df_0 = df_0.drop(columns=columns_to_drop)
 # Print the resulting DataFrame
 # print(df_0)
 
-df_1 = pd.read_csv('daily_sales_data_1.csv')
+df_1 = pd.read_csv(os.path.join(data_folder, 'daily_sales_data_1.csv'))
 
 # Filter rows where 'product' is 'pink morsel'
 df_1 = df_1[df_1['product'] == 'pink morsel']
@@ -48,7 +53,7 @@ df_1 = df_1.drop(columns=columns_to_drop)
 # Print the resulting DataFrame
 # print(df_1)
 
-df_2 = pd.read_csv('daily_sales_data_2.csv')
+df_2 = pd.read_csv(os.path.join(data_folder, 'daily_sales_data_2.csv'))
 
 # Filter rows where 'product' is 'pink morsel'
 df_2 = df_2[df_2['product'] == 'pink morsel']
@@ -162,36 +167,6 @@ def update_line_chart(selected_region):
 
 if __name__ == '__main__':
     app.run(debug=True,port=8052)
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
 
 
 # In[ ]:
