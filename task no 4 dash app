@@ -1,0 +1,78 @@
+import pandas as pd
+import numpy as np
+
+# Sample dataset (for demo purposes)
+np.random.seed(0)
+dates = pd.date_range(start="2021-01-01", periods=31, freq='D')
+regions = ['north', 'east', 'south', 'west']
+df = pd.DataFrame({
+    'Date': np.tile(dates, 4),
+    'Sales': np.random.randint(200, 350, size=124),
+    'Region': np.repeat(regions, 31)
+})
+
+
+import dash
+from dash import dcc, html, Input, Output
+import plotly.express as px
+
+# App
+app = dash.Dash(__name__)
+app.title = "Soul Foods Region Sales Visualiser"
+
+# Layout
+app.layout = html.Div(style={'fontFamily': 'Arial, sans-serif', 'backgroundColor': '#f9f9f9', 'padding': '20px'}, children=[
+    html.H1("Soul Foods Sales Visualiser", style={'textAlign': 'center', 'color': '#2c3e50'}),
+
+    html.Div([
+        html.Label("Filter by Region:", style={'fontSize': '18px', 'marginRight': '10px'}),
+        dcc.RadioItems(
+            id='region-filter',
+            options=[
+                {'label': 'All', 'value': 'all'},
+                {'label': 'North', 'value': 'north'},
+                {'label': 'East', 'value': 'east'},
+                {'label': 'South', 'value': 'south'},
+                {'label': 'West', 'value': 'west'}
+            ],
+            value='all',
+            inline=True,
+            labelStyle={'padding': '10px', 'fontSize': '16px'}
+        )
+    ], style={'textAlign': 'center', 'marginBottom': '30px'}),
+
+    dcc.Graph(id='sales-chart'),
+
+    html.Div("Red dashed line indicates the Pink Morsel price increase on Jan 15, 2021.",
+             style={'textAlign': 'center', 'fontStyle': 'italic', 'color': '#7f8c8d'})
+])
+
+# Callback to update chart
+@app.callback(
+    Output('sales-chart', 'figure'),
+    Input('region-filter', 'value')
+)
+def update_chart(selected_region):
+    if selected_region == 'all':
+        filtered_df = df
+    else:
+        filtered_df = df[df['Region'] == selected_region]
+
+    fig = px.line(filtered_df, x='Date', y='Sales', color='Region' if selected_region == 'all' else None,
+                  title=f"Sales Over Time ({selected_region.capitalize() if selected_region != 'all' else 'All Regions'})")
+    
+    fig.add_vline(x="2021-01-15", line_dash='dash', line_color='red',
+                  annotation_text="Price Increase", annotation_position="top right")
+    
+    fig.update_layout(
+        plot_bgcolor='#ffffff',
+        paper_bgcolor='#ffffff',
+        font=dict(color='#2c3e50'),
+        title_font=dict(size=22)
+    )
+    return fig
+
+# Run app
+if __name__ == '__main__':
+    app.run_server(debug=True)
+
