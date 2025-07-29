@@ -1,0 +1,22 @@
+import pytest
+from dash import Dash
+from app import app  # Assuming your Dash app is in app.py
+
+@pytest.fixture
+def dash_app():
+    return app
+
+def test_header_present(dash_duo, dash_app):
+    dash_duo.start_server(dash_app)
+    header = dash_duo.find_element("h1")
+    assert "Soul Foods Sales Visualiser" in header.text
+
+def test_graph_present(dash_duo, dash_app):
+    dash_duo.start_server(dash_app)
+    graph = dash_duo.find_element("#sales-chart")
+    assert graph is not None
+
+def test_radio_present(dash_duo, dash_app):
+    dash_duo.start_server(dash_app)
+    radio_items = dash_duo.find_element("#region-filter")
+    assert radio_items is not None
