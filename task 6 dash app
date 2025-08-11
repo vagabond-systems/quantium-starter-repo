@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# Exit on any error
+set -e
+
+# Path to your virtual environment (edit if needed)
+VENV_PATH="venv"
+
+# Activate the virtual environment
+if [ -d "$VENV_PATH" ]; then
+    source "$VENV_PATH/bin/activate"
+else
+    echo "❌ Virtual environment not found at $VENV_PATH"
+    exit 1
+fi
+
+# Run pytest
+echo "▶ Running test suite..."
+pytest tests/
+
+# Capture exit code
+EXIT_CODE=$?
+
+if [ $EXIT_CODE -eq 0 ]; then
+    echo "✅ All tests passed."
+    exit 0
+else
+    echo "❌ Some tests failed."
+    exit 1
+fi
