@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: dash-testing-stub
+Version: 0.0.2
+Summary: Package installed with dash[testing] for optional loading of pytest dash plugin.
+Home-page: https://plotly.com/dash
+Author: Philippe Duval
+Author-email: philippe@plot.ly
+License: MIT
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Dash
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# dash-testing-stub
+Package installed with `dash[testing]` for optional loading of pytest dash plugin.

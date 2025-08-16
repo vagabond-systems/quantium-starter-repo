@@ -1,0 +1,25 @@
+Metadata-Version: 2.0
+Name: percy
+Version: 2.0.2
+Summary: Python client library for visual regression testing with Percy (https://percy.io).
+Home-page: https://github.com/percy/python-percy-client
+Author: Perceptual Inc.
+Author-email: team@percy.io
+License: MIT
+Keywords: percy
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Requires-Dist: requests (>=2.14.0)
+
+UNKNOWN
+
+

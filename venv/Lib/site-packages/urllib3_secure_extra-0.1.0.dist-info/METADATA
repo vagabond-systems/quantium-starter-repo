@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: urllib3-secure-extra
+Version: 0.1.0
+Summary: Marker library to detect whether urllib3 was installed with the deprecated [secure] extra
+Author-email: Seth Michael Larson <sethmichaellarson@gmail.com>
+Maintainer-email: Seth Michael Larson <sethmichaellarson@gmail.com>, Quentin Pradet <quentin@pradet.me>
+Description-Content-Type: text/markdown
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Software Development :: Libraries
+Project-URL: Source Code, https://github.com/urllib3/urllib3-secure-extra
+
+# urllib3-secure-extra
+
+Marker library to detect whether urllib3 was installed with the deprecated `[secure]` extra.
+
+Read the [issue on the urllib3 repository](https://github.com/urllib3/urllib3/issues/2680) for more information.
+
