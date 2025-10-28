@@ -130,3 +130,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+
+# 
+.next_steps.md/
+/notes.md/
+/README.md/
