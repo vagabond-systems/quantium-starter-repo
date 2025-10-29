@@ -1,0 +1,4 @@
+dash 
+pandas 
+plotly
+dash[testing]
