@@ -1,0 +1,61 @@
+body {
+  background: #f4f7fb;
+  color: #1b1f23;
+  margin: 0;
+  padding: 24px 0;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+#main-container {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px 28px;
+  box-shadow: 0 6px 18px rgba(27,31,35,0.08);
+}
+
+#header h1 {
+  margin: 0 0 6px 0;
+  font-size: 26px;
+  color: #0b3d91;
+}
+
+#header p {
+  margin: 0 0 18px 0;
+  color: #39414a;
+}
+
+#controls {
+  margin: 8px 0 18px 0;
+}
+
+.dash-graph {
+  border-radius: 8px;
+}
+
+/* Radio label base styles are applied via `labelStyle` on the RadioItems component
+   (preferred: moves static styling into component props so it's not coupled to
+   Dash's internal markup). Kept CSS here to handle the `:checked` state which
+   must target generated markup. We scope the selector to the stable
+   `.region-radio` class added to the RadioItems to reduce fragility.
+*/
+
+#controls label {
+  /* fallback for any labels not covered by component props */
+  background: #eef4ff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  margin-right: 8px;
+}
+
+/* NOTE: This selector still couples to Dash's rendered structure (input + span),
+   but it is scoped to `.region-radio` to make the coupling as narrow/stable as
+   possible. If Dash adds explicit class hooks in a future release, prefer
+   targeting those instead and remove this rule. */
+#controls .region-radio input:checked + span {
+  background: #cfe0ff;
+}
+
+@media (max-width: 600px) {
+  #main-container { padding: 16px; }
+  #header h1 { font-size: 20px; }
+}

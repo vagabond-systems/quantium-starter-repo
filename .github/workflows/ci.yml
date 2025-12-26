@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+    branches: [ '**' ]
+  pull_request:
+    branches: [ '**' ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+
+      - name: Install and run tests
+        env:
+          PYTHONUNBUFFERED: 1
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e .
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          bash scripts/run_tests.sh
