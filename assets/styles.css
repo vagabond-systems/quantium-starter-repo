@@ -1,0 +1,40 @@
+/* Body and Background */
+body {
+    background-color: #f4f7f6;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header Styling */
+.header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 2px -2px gray;
+}
+
+/* The Box containing our controls and graph */
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Radio Button Styling */
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* The Graph Card */
+.graph-card {
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
