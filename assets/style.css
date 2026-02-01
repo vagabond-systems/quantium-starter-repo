@@ -1,0 +1,42 @@
+/* ── Radio pill buttons ────────────────────── */
+.region-radio .dash-radio-menu {
+    display: flex !important;
+    gap: 6px !important;
+}
+
+.region-radio label {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 16px;
+    border-radius: 20px;
+    background: #2e3244;
+    color: #7a7f95;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid #2e3244;
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+.region-radio label:hover {
+    background: #3a3f57;
+    color: #eef0f4;
+}
+
+.region-radio input[type="radio"] {
+    display: none;
+}
+
+.region-radio input[type="radio"]:checked + label {
+    background: #f43f5e;
+    color: #ffffff;
+    border-color: #f43f5e;
+    font-weight: 600;
+    box-shadow: 0 2px 10px rgba(244, 63, 94, 0.35);
+}
+
+/* ── Scrollbar ─────────────────────────────── */
+::-webkit-scrollbar            { width: 6px; }
+::-webkit-scrollbar-track      { background: #0f1117; }
+::-webkit-scrollbar-thumb      { background: #2e3244; border-radius: 3px; }
