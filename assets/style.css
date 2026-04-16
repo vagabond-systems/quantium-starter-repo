@@ -1,0 +1,86 @@
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+    background: #fff4f8;
+    color: #6b4a57;
+    font-family: Calibri, "Trebuchet MS", sans-serif;
+}
+
+body {
+    padding: 32px 24px;
+}
+
+body > div {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 0 24px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 24px;
+    color: #b04f76;
+    font-family: "Proxima Nova", "Avenir Next", Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    text-align: center;
+}
+
+#region-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    margin-bottom: 24px;
+    overflow: hidden;
+    background: #f3bfd1;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(196, 121, 152, 0.18);
+}
+
+#region-filter > label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 140px;
+    margin: 0;
+    padding: 16px 20px;
+    color: #8f4f67;
+    font-family: Calibri, "Trebuchet MS", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#region-filter > label:hover {
+    background: #f8d6e2;
+}
+
+#region-filter > label:has(input:checked) {
+    background: #e79bb7;
+    color: #ffffff;
+}
+
+#region-filter input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#sales-chart {
+    padding: 20px;
+    background: #fffafd;
+    border-radius: 18px;
+    box-shadow: 0 16px 40px rgba(196, 121, 152, 0.14);
+}
+
+#sales-chart .js-plotly-plot .plotly .main-svg {
+    border-radius: 12px;
+}
