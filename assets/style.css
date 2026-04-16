@@ -1,0 +1,35 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+#root {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 24px 48px;
+}
+
+#title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+#subtitle {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 24px;
+}
+
+main{
+    background: #fff;
+    padding: 24px 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 24px;
+}
