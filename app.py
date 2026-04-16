@@ -1,6 +1,6 @@
 import pandas as pd
-import plotly.graphh_objects as go 
-from dash import Dash, dcc, doc, gtml, html 
+import plotly.graph_objects as go 
+from dash import Dash, dcc, html 
 
 df = pd.read_csv("formatted_data.csv", parse_dates=["date"])
 
