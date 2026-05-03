@@ -1,0 +1,14 @@
+body { background: linear-gradient(180deg, #f7f9fc, #ffffff); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #222; }
+.container { max-width: 980px; margin: 28px auto; padding: 18px; background: white; border-radius: 12px; box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06); }
+.header { padding-bottom: 8px; border-bottom: 1px solid #eef2f7; }
+.title { margin: 0; font-size: 24px; color: #0f172a; }
+.subtitle { margin-top: 6px; color: #475569; }
+.content { display: grid; grid-template-columns: 240px 1fr; gap: 18px; margin-top: 18px; }
+.controls { padding: 12px; border-radius: 8px; background: linear-gradient(180deg,#fbfdff,#f5f9ff); border: 1px solid #e6eefc; }
+.control-label { font-weight: 600; margin-bottom: 8px; display: block; }
+.radio label { margin-right: 8px; }
+.chart { padding: 6px; }
+
+@media (max-width: 800px) {
+  .content { grid-template-columns: 1fr; }
+}
