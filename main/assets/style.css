@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+*{
+    font-family:'Inter',sans-serif;
+}
+
+body{
+    margin:0;
+    background:#0A0F1F;
+    color:white;
+}
+
+.header{
+
+    display:flex;
+    align-items:center;
+    gap:20px;
+
+    padding:30px 50px;
+
+    background:#111827;
+
+    border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.logo{
+    height:70px;
+}
+
+.title{
+    margin:0;
+    font-size:34px;
+    font-weight:700;
+}
+
+.subtitle{
+    color:#B8C1D1;
+}
+
+.filter-card{
+
+    margin:30px 50px;
+
+    background:#161D31;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    box-shadow:
+    0px 10px 30px rgba(0,0,0,0.35);
+}
+
+.chart-card{
+
+    margin:30px 50px;
+
+    background:#161D31;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    box-shadow:
+    0px 10px 30px rgba(0,0,0,0.35);
+}
+
+.section-title{
+    margin-bottom:20px;
+}
+
+.radio-group{
+
+    display:flex;
+    gap:25px;
+
+    font-size:18px;
+}
+
+.radio-group label{
+    color:white !important;
+    font-weight:600;
+}
+
+input[type="radio"]{
+    accent-color:#7B61FF;
+    transform:scale(1.2);
+    margin-right:8px;
+}
+
+.filter-card:hover,
+.chart-card:hover{
+
+    transform:translateY(-2px);
+
+    transition:0.3s;
+
+    box-shadow:
+    0px 15px 35px rgba(123,97,255,0.20);
+}
