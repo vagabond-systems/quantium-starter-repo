@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+    color: #222;
+}
+
+div {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+#region-filter {
+    margin-top: 15px;
+}
+
+#region-filter label {
+    margin-right: 20px;
+    cursor: pointer;
+}
